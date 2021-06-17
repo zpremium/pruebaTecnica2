@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+  <div *ngFor="let starship of starships">
+    <h2>{{ starship.name }}</h2>
+    <hr />
+    <b
+      ><p>Model: {{ starship.model }}</p></b
+    >
+    <b
+      ><p>Manufacturer: {{ starship.manufacturer }}</p></b
+    >
+    <b
+      ><p>Crew: {{ starship.crew }}</p></b
+    >
+    <b
+      ><p>Length: {{ starship.length }}</p></b
+    >
+    <b
+      ><p>Consumables: {{ starship.consumables }}</p></b
+    >
+  </div></div>
+</div>
+
+<button (click)="goDetail()">go to detail</button>

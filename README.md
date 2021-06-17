@@ -1,27 +1,15 @@
 # PruebaTecnica2
+Introducción
+Te han encargado realizar un prototipo para mostrar el potencial de tu equipo de programadores en el comité de empresa. Dicho prototipo tendrá la temática de Star Wars.
+Requisitos mínimos
+•	El listado de naves solo puede ser visible para usuarios registrados.
+•	El listado de naves debe ser consumido desde el api proporcionada por nuestro proveedor: https://swapi.dev
+•	Se deben poder registrar nuevos usuarios. No es necesario implementar la parte de servidor.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Tareas
+El equipo tiene una capacidad de 45 puntos por sprint y a ti te ha tocado realizar 15 puntos. Elige las tareas que creas que mejor se adaptan a tus conocimientos. Justifica por que las has elegido:
+•	Creación de la pantalla principal en la que se muestre el listado de navproveniente de la API. 10 puntos.
+•	Creación de una ficha de detalle de la nave: Se quiere crear una ficha que se abra al hacer click sobre una de las naves que aparecen. Se debe implementar un botón de volver al listado. 3 puntos.
+•	Modernización del site. Cambia los estilos que creas pertinentes. El único criterio es que a dirección le gustaría que se pareciera lo máximo posible a la web oficial de Star Wars. 5 puntos
+•	Implementar un scroll infinito, es decir, cuando el usuario llega a la parte inferior de la web, se cargan automáticamente más naves. 5 puntos.
+•	Creación del menú de navegación en la parte superior de la pantalla. 2 puntos.
