@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ListadoComponent } from './listado/listado.component';
 import { DetalleComponent } from './detalle/detalle.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListadoComponent,
-    DetalleComponent
+    DetalleComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
