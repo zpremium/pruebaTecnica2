@@ -1,3 +1,61 @@
 div{
-  margin-bottom: 30px;
+  margin: 10px 20px 25px 20px;
+  background-color: black;
 }
+input{
+  border: none;
+  background-color: #242424;
+}
+button{
+  width: 55px;
+  border: none;
+  padding: 0;
+  background: none;
+  background-color: #242424;
+}
+.input-group{
+  width: 250px;
+}
+
+.derecha{
+  margin-top: -145px;
+}
+
+.derecha li{
+  margin-top: -35px ;
+}
+
+.login{
+  margin-top: -20px;
+}
+.centro a{
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(75, 75, 75,0.45);
+
+}
+.guiones{
+  color: #6D6D6D ;
+  margin-top: 6px;
+}
+.centro{
+  margin-top: 50px;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(75, 75, 75,0.75);
+}
+a{
+  color: #6D6D6D;
+  text-decoration: none;
+}
+a:hover{
+  color: #CCCCCC ;
+}
+
+img{
+width: 200px;
+margin-top: -25px;
+padding-bottom: 50px;
+}
+

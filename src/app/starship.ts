@@ -8,5 +8,7 @@ export class Starship {
        crew: string,
        length: string,
        consumables: string,
+       cost_in_credits:string,
+       passengers:string
   ){}
 }

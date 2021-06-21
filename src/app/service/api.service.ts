@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class ApiService {
   url: string;
 
-  constructor(public http: HttpClient) {
+  constructor(private http: HttpClient) {
     this.url = 'https://swapi.dev/api/';
   }
 

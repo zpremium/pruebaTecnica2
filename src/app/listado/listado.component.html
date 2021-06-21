@@ -4,24 +4,24 @@
 <div class="container">
   <div class="row">
   <div *ngFor="let starship of starships">
-    <h2>{{ starship.name }}</h2>
+
+    <h2 (click)="goDetail()">{{ starship.name }}</h2>
     <hr />
-    <b
-      ><p>Model: {{ starship.model }}</p></b
-    >
-    <b
-      ><p>Manufacturer: {{ starship.manufacturer }}</p></b
-    >
-    <b
-      ><p>Crew: {{ starship.crew }}</p></b
-    >
-    <b
-      ><p>Length: {{ starship.length }}</p></b
-    >
-    <b
-      ><p>Consumables: {{ starship.consumables }}</p></b
-    >
-  </div></div>
+
+    <!-- <p><b>Model:</b>  {{ starship.model }}</p>
+
+    <p><b>Manufacturer: </b>{{ starship.manufacturer }}</p>
+
+    <p><b>Crew: </b>{{ starship.crew }}</p>
+
+    <p><b>Passengers: </b>{{ starship.passengers }}</p>
+
+    <p><b>Length:</b> {{ starship.length }}</p>
+
+    <p><b>Consumables: </b>{{ starship.consumables }}</p>
+
+   <p><b>Cost:</b> {{starship.cost_in_credits}}</p> -->
+
 </div>
 
-<button (click)="goDetail()">go to detail</button>
+<!-- <button (click)="goDetail()">go to detail</button> -->

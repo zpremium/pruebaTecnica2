@@ -10,29 +10,24 @@ import { Starship } from '../starship';
   styleUrls: ['./listado.component.css'],
 })
 export class ListadoComponent implements OnInit {
-   title: string;
-   starships: any;
-   starship: Starship; // Usa el modelo 'starship' para usar sus atributos en mi componente
+  title: string;
+  starships: any; //resultado de la api
+  starship: Starship; // No hace falta llamar a la clase Starship solo si te sabes que datos existen dentro de la API y que datos necesitas, pero como yo no me voy a acordar de los datos que existen dentro de esta API llamo a la clase y digo que existen estos datos y que puedo utilizarlos.
 
-
-  constructor(
-    private httpClient: HttpClient,
-    private router: Router,
-    private apiService: ApiService
-  ) {
+  constructor(private router: Router, private apiService: ApiService) {
     this.title = 'STASHIPS';
-    this.starship = new Starship('', '', '', '', '', '');
+    this.starship = new Starship('', '', '', '', '', '', '','');
     //cada string vacio es una interface de starship.ts
   }
 
   ngOnInit() {
     this.apiService.getStarships().subscribe(
-      response => {
+      (response) => {
         let res: any;
         res = response; // Recolecta la respuesta de la API en la variable 'res'
         this.starships = res.results; //Accede al array 'results' que esta dentro de 'res' y lo guarda en starships
       },
-      error => {
+      (error) => {
         console.log(error);
       }
     );
