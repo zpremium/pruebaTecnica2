@@ -1,3 +1,51 @@
 <app-header></app-header>
 
-<button (click)='goBack()'>Ir atrás</button>
+<div class="container">
+  <div class="row">
+    <div *ngIf="starship">
+      <h2>{{ starship.name }}</h2>
+
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-primary" type="button" (click)="goBack()">
+          <i class="bi bi-x-square-fill"></i>
+        </button>
+      </div>
+
+      <hr />
+
+      <p class="text-center"><b>Model:</b> {{ starship.model }}</p>
+
+      <p class="text-center">
+        <b>Starship Class:</b> {{ starship.starship_class }}
+      </p>
+
+      <p class="text-center">
+        <b>Manufacturer: </b>{{ starship.manufacturer }}
+      </p>
+
+      <p class="text-center"><b>Cost:</b> {{ starship.cost_in_credits }}</p>
+
+      <p class="text-center"><b>Length:</b> {{ starship.length }}</p>
+
+      <p class="text-center"><b>Crew: </b>{{ starship.crew }}</p>
+
+      <p class="text-center"><b>Passengers: </b>{{ starship.passengers }}</p>
+
+      <p class="text-center">
+        <b>Max Atmosphering Speed: </b>{{ starship.max_atmosphering_speed }}
+      </p>
+
+      <p class="text-center">
+        <b>Hyperdrive Rating: </b>{{ starship.hyperdrive_rating }}
+      </p>
+
+      <p class="text-center"><b>MGLT: </b>{{ starship.MGLT }}</p>
+
+      <p class="text-center">
+        <b>Cargo Capacity: </b>{{ starship.cargo_capacity }}
+      </p>
+
+      <p class="text-center"><b>Consumables: </b>{{ starship.consumables }}</p>
+    </div>
+  </div>
+</div>

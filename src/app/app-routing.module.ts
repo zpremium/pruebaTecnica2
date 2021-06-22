@@ -9,12 +9,12 @@ const routes: Routes = [
     component:ListadoComponent
   },
   {
-    path:'detalle',
-    component:DetalleComponent
-  },
-  {
     path:'',
     component:ListadoComponent
+  },
+  {
+    path:'detalle/:id',
+    component:DetalleComponent
   }
 ];
 

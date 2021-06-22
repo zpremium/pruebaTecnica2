@@ -1,14 +1,12 @@
-
 <app-header></app-header>
 
 <div class="container">
   <div class="row">
-  <div *ngFor="let starship of starships">
+    <div *ngFor="let starship of starships">
+      <h2 routerLink="/detalle/{{ starship.name }}">{{ starship.name }}</h2>
+      <hr />
 
-    <h2 (click)="goDetail()">{{ starship.name }}</h2>
-    <hr />
-
-    <!-- <p><b>Model:</b>  {{ starship.model }}</p>
+      <!-- <p><b>Model:</b>  {{ starship.model }}</p>
 
     <p><b>Manufacturer: </b>{{ starship.manufacturer }}</p>
 
@@ -21,7 +19,17 @@
     <p><b>Consumables: </b>{{ starship.consumables }}</p>
 
    <p><b>Cost:</b> {{starship.cost_in_credits}}</p> -->
+    </div>
 
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+
+        <li class="page-item"><a class="page-link" href="#" (click)='getData()'>1</a></li>
+        <li class="page-item"><a class="page-link" href="#" (click)='getData2()'>2</a></li>
+        <li class="page-item"><a class="page-link" href="#" (click)='getData3()'>3</a></li>
+        <li class="page-item"><a class="page-link" href="#" (click)='getData4()'>4</a></li>
+        
+      </ul>
+    </nav>
+  </div>
 </div>
-
-<!-- <button (click)="goDetail()">go to detail</button> -->

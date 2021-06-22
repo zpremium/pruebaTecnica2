@@ -1,20 +1,41 @@
 import { Component, OnInit } from '@angular/core';
-import {Location} from '@angular/common';
+import { Location } from '@angular/common';
+import { ApiService } from '../service/api.service';
+import { Starship } from '../starship';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-detalle',
   templateUrl: './detalle.component.html',
-  styleUrls: ['./detalle.component.css']
+  styleUrls: ['./detalle.component.css'],
 })
 export class DetalleComponent implements OnInit {
 
-  constructor(private _location: Location) { }
+  starship:any;
+
+  constructor(
+    private _location: Location,
+    private apiService: ApiService,
+    private route:ActivatedRoute,
+
+  ) {
+  }
 
   ngOnInit(): void {
+    this.getStarshipDetails();
   }
 
-  goBack(){
-    this._location.back()
+  getStarshipDetails(){
+    const name = String(this.route.snapshot.paramMap.get('id'));
+
+    this.starship = this.apiService.getStarshipByName(name);
+    console.log(this.starship);
+
   }
 
+
+
+  goBack() {
+    this._location.back();
+  }
 }

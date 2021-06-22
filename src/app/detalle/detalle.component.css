@@ -1,0 +1,31 @@
+h2 {
+  font-family: "Press Start 2P", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFE919;
+}
+
+p{
+  font-size: x-large;
+
+}
+
+button{
+  background-color: transparent;
+  color: #FFE919;
+  border:none;
+  width: 50px;
+}
+button:hover{
+  background-color:#242424;
+  color: #FFE919 ;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(75, 75, 75,0.75);
+}
+
+i{
+  width: 200px;
+  height: 200px;
+}
