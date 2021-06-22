@@ -10,8 +10,9 @@ import { Starship } from '../starship';
 })
 export class ListadoComponent implements OnInit {
   title: string;
-  starships: any; //resultado de la api
+  starships: any=[]; //resultado de la api
   starship: Starship; // No hace falta llamar a la clase Starship solo si te sabes que datos existen dentro de la API y que datos necesitas, pero como yo no me voy a acordar de los datos que existen dentro de esta API llamo a la clase y digo que existen estos datos y que puedo utilizarlos.
+  getNextShip: any;
 
   constructor(private router: Router, private apiService: ApiService) {
     this.title = 'STASHIPS';
@@ -32,8 +33,8 @@ export class ListadoComponent implements OnInit {
       (response) => {
         let res: any;
         res = response; // Recolecta la respuesta de la API en la variable 'res'
-        this.starships = res.results; //Accede al array 'results' que esta dentro de 'res' y lo guarda en starships
-        this.apiService.naves = res.results; //estoy guardando el array del servicio naves, lo guardo del resultado del api
+        this.starships = [...this.starships,...res.results]; //Accede al array 'results' que esta dentro de 'res' y lo guarda en starships (MERGEAR)
+        this.apiService.naves = this.starships; //estoy guardando el array del servicio naves, lo guardo del resultado del api
       },
       (error) => {
         console.log(error);
@@ -41,43 +42,44 @@ export class ListadoComponent implements OnInit {
     );
   }
 
-  getData2(){
-    this.apiService.getStarships2().subscribe(
-      (response) => {
-        let res: any;
-        res = response; // Recolecta la respuesta de la API en la variable 'res'
-        this.starships = res.results; //Accede al array 'results' que esta dentro de 'res' y lo guarda en starships
-        this.apiService.naves = res.results; //estoy guardando el array del servicio naves, lo guardo del resultado del api
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-  }
-  getData3(){
-    this.apiService.getStarships3().subscribe(
-      (response) => {
-        let res: any;
-        res = response; // Recolecta la respuesta de la API en la variable 'res'
-        this.starships = res.results; //Accede al array 'results' que esta dentro de 'res' y lo guarda en starships
-        this.apiService.naves = res.results; //estoy guardando el array del servicio naves, lo guardo del resultado del api
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-  }
-  getData4(){
-    this.apiService.getStarships4().subscribe(
-      (response) => {
-        let res: any;
-        res = response; // Recolecta la respuesta de la API en la variable 'res'
-        this.starships = res.results; //Accede al array 'results' que esta dentro de 'res' y lo guarda en starships
-        this.apiService.naves = res.results; //estoy guardando el array del servicio naves, lo guardo del resultado del api
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-  }
+  // getData2(){
+  //   this.apiService.getStarships2().subscribe(
+  //     (response) => {
+  //       let res: any;
+  //       res = response; // Recolecta la respuesta de la API en la variable 'res'
+  //       this.starships = res.results; //Accede al array 'results' que esta dentro de 'res' y lo guarda en starships
+
+  //       this.apiService.naves = res.results; //estoy guardando el array del servicio naves, lo guardo del resultado del api
+  //     },
+  //     (error) => {
+  //       console.log(error);
+  //     }
+  //   );
+  // }
+  // getData3(){
+  //   this.apiService.getStarships3().subscribe(
+  //     (response) => {
+  //       let res: any;
+  //       res = response; // Recolecta la respuesta de la API en la variable 'res'
+  //       this.starships = res.results; //Accede al array 'results' que esta dentro de 'res' y lo guarda en starships
+  //       this.apiService.naves = res.results; //estoy guardando el array del servicio naves, lo guardo del resultado del api
+  //     },
+  //     (error) => {
+  //       console.log(error);
+  //     }
+  //   );
+  // }
+  // getData4(){
+  //   this.apiService.getStarships4().subscribe(
+  //     (response) => {
+  //       let res: any;
+  //       res = response; // Recolecta la respuesta de la API en la variable 'res'
+  //       this.starships = res.results; //Accede al array 'results' que esta dentro de 'res' y lo guarda en starships
+  //       this.apiService.naves = res.results; //estoy guardando el array del servicio naves, lo guardo del resultado del api
+  //     },
+  //     (error) => {
+  //       console.log(error);
+  //     }
+  //   );
+  // }
 }

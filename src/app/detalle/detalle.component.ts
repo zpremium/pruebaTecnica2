@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ApiService } from '../service/api.service';
-import { Starship } from '../starship';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -33,9 +32,8 @@ export class DetalleComponent implements OnInit {
 
   }
 
-
-
   goBack() {
     this._location.back();
+    this.apiService.pages= 0;
   }
 }

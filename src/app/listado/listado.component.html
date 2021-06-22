@@ -5,30 +5,14 @@
     <div *ngFor="let starship of starships">
       <h2 routerLink="/detalle/{{ starship.name }}">{{ starship.name }}</h2>
       <hr />
-
-      <!-- <p><b>Model:</b>  {{ starship.model }}</p>
-
-    <p><b>Manufacturer: </b>{{ starship.manufacturer }}</p>
-
-    <p><b>Crew: </b>{{ starship.crew }}</p>
-
-    <p><b>Passengers: </b>{{ starship.passengers }}</p>
-
-    <p><b>Length:</b> {{ starship.length }}</p>
-
-    <p><b>Consumables: </b>{{ starship.consumables }}</p>
-
-   <p><b>Cost:</b> {{starship.cost_in_credits}}</p> -->
     </div>
 
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
-
-        <li class="page-item"><a class="page-link" href="#" (click)='getData()'>1</a></li>
-        <li class="page-item"><a class="page-link" href="#" (click)='getData2()'>2</a></li>
+        <li class="page-item"><a class="page-link" (click)='getData()'>More Starships</a></li>
+        <!-- <li class="page-item"><a class="page-link" href="#" (click)='getData2()'>2</a></li>
         <li class="page-item"><a class="page-link" href="#" (click)='getData3()'>3</a></li>
-        <li class="page-item"><a class="page-link" href="#" (click)='getData4()'>4</a></li>
-        
+        <li class="page-item"><a class="page-link" href="#" (click)='getData4()'>4</a></li> -->
       </ul>
     </nav>
   </div>
